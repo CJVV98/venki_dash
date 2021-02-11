@@ -95,6 +95,11 @@ class PostController extends ApiController
      */
     public function update(Request $request, Post $post)
     {
+
+        if ($request->has("user_id")) {
+            $post->user_id = $request->user_id;
+        }
+
         if ($request->has("count_like")) {
             $post->count_like = $request->count_like;
         }
@@ -106,13 +111,14 @@ class PostController extends ApiController
             );
         }
 
-        $post->saveOrFail();
+        $post->save();
 
         return $this->api_success([
             'data'      =>  new PostResource($post),
             'message' => __('pages.responses.update'),
             'code' => 201
         ], 201);
+
     }
 
     /**
