@@ -111,7 +111,7 @@ class PostController extends ApiController
         return $this->api_success([
             'data'      =>  new PostResource($post),
             'message' => __('pages.responses.update'),
-            'code' => 201  
+            'code' => 201
         ], 201);
     }
 

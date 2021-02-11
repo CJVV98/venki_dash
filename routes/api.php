@@ -23,7 +23,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('oauth/token', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
 Route::resource('images', 'Image\ImageController', ['except' => [ 'edit']]);
-/** 
+/**
  * Users
  */
 Route::resource('users', 'User\UserController', ['except' => ['create', 'edit']]);
@@ -36,22 +36,22 @@ Route::resource('users.replies', 'User\UserReplyController', ['only' => ['index'
 Route::resource('users.recomendations', 'User\UserRecomendationController', ['only' => ['index']]);
 Route::resource('users.timelines', 'User\UserTimelineController', ['only' => ['index']]);
 Route::resource('users.achievements', 'User\UserAchievementController', ['only' => ['index']]);
-/** 
+/**
  * Courses
  */
 Route::resource('courses', 'Course\CourseController', ['except' => ['create', 'edit']]);
 Route::resource('courses.lessons', 'Course\CourseLessonController', ['except' => ['create', 'edit']]);
 Route::resource('courses.scores', 'Course\CourseScoreController', ['except' => ['create', 'edit']]);
-/** 
+/**
  * Lessons
  */
 Route::resource('lessons', 'Lesson\LessonController', ['except' => ['create', 'edit']]);
 Route::resource('lessons.resources', 'Lesson\LessonResourceController', ['except' => ['create', 'edit']]);
-/** 
+/**
  * Resources
  */
 Route::resource('resources', 'Resource\ResourceController', ['except' => ['create', 'edit']]);
-/** 
+/**
  * Categories
  */
 Route::resource('categories', 'Category\CategoryController', ['except' => ['create', 'edit']]);
@@ -73,16 +73,17 @@ Route::resource('chats.messages', 'Chat\ChatMessageController', ['except' => ['c
  * Message
  */
 Route::resource('messages', 'Message\MessageController', ['except' => ['create', 'edit']]);
-/** 
+/**
  * Push
  */
 Route::post('push', 'Push\PushController@sendPush');
-/** 
+/**
  * Post
  */
 Route::resource('posts', 'Post\PostController', ['except' => ['create', 'edit']]);
-/** 
- * Profile 
+Route::put('posts', [App\Http\Controllers\Post\PostController::class, 'update']);
+/**
+ * Profile
  */
 Route::resource('profiles', 'Profile\ProfileController', ['except' => ['create', 'edit']]);
 Route::resource('profiles.questions', 'Profile\ProfileQuestionController', ['only' => ['index']]);
@@ -91,8 +92,8 @@ Route::resource('profiles.questions', 'Profile\ProfileQuestionController', ['onl
  */
 Route::resource('surveys', 'Survey\SurveyController', ['except' => ['create', 'edit']]);
 Route::resource('surveys.questions', 'Survey\SurveyQuestionController', ['except' => ['create', 'edit']]);
-/** 
- * Reply 
+/**
+ * Reply
  */
 Route::resource('replies', 'Reply\ReplyController', ['except' => ['create', 'edit']]);
 /**
