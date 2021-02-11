@@ -81,7 +81,6 @@ Route::post('push', 'Push\PushController@sendPush');
  * Post
  */
 Route::resource('posts', 'Post\PostController', ['except' => ['create', 'edit']]);
-Route::put('posts/update', [\App\Http\Controllers\Post\PostController::class, 'update']);
 /**
  * Profile
  */
