@@ -95,25 +95,25 @@ class PostController extends ApiController
      */
     public function update(Request $request, Post $post)
     {
+        $request->validate([
+            'count_like' => 'required'
+        ]);
 
         if ($request->has("count_like")) {
             $post->count_like = $request->count_like;
+            $post->save();
+
+            return $this->api_success([
+                'data'      =>  new PostResource($post),
+                'message' => __('pages.responses.update'),
+                'code' => 201
+            ], 201);
         }
 
-        if (!$post->isDirty()) {
-            return $this->errorResponse(
-                'Se debe especificar al menos un valor diferente para actualizar',
-                422
-            );
-        }
-
-        $post->saveOrFail();
-
-        return $this->api_success([
-            'data'      =>  new PostResource($post),
-            'message' => __('pages.responses.update'),
-            'code' => 201
-        ], 201);
+        return $this->errorResponse(
+            'Se necesita un valor para actualizar el post!',
+            422
+        );
 
     }
 
