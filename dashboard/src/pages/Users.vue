@@ -43,7 +43,7 @@ export default {
             this.updateKey++;
             this.selectedUser = { ...user };
         },
-       
+
     },
 };
 </script>

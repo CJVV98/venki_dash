@@ -7,8 +7,8 @@
             <div class="login-header">
                 <div class="brand">
                     <span class="logo"></span>
-                    <b>Color</b> Administrador
-                   
+                    <b>Venki</b> Administrador
+
                 </div>
                 <div class="icon">
                     <i class="fa fa-lock"></i>
@@ -20,29 +20,36 @@
                 <!-- begin login-content -->
                 <div class="login-content">
                     <div class="form-group m-b-20">
+                        <label for="email">Email</label>
                         <input
-                            type="text"
+                            id="email"
+                            v-model="user.email"
+                            type="email"
                             class="form-control form-control-lg inverse-mode"
-                            placeholder="Email Address"
+                            placeholder="Email"
+                            name="password"
                             required
                         />
                     </div>
                     <div class="form-group m-b-20">
+                        <label for="password">Password</label>
                         <input
+                            id="password"
+                            v-model="user.password"
                             type="password"
                             class="form-control form-control-lg inverse-mode"
                             placeholder="Password"
                             required
                         />
                     </div>
-                    <div class="checkbox checkbox-css m-b-20">
+                    <!--<div class="checkbox checkbox-css m-b-20">
                         <input type="checkbox" id="remember_checkbox" />
                         <label for="remember_checkbox">Remember Me</label>
-                    </div>
+                    </div>-->
                     <div class="login-buttons">
                         <button
                             type="button"
-                            @click="checkForm"
+                            @click="login"
                             class="btn btn-success btn-block btn-lg"
                         >
                             Iniciar sesion
@@ -60,6 +67,9 @@
 
 <script>
 import PageOptions from "../config/PageOptions.vue";
+import axios from "axios";
+axios.defaults.withCredentials = true;
+// axios.defaults.baseURL = 'http://127.0.0.1:8000';
 
 export default {
     created() {
@@ -69,25 +79,27 @@ export default {
         PageOptions.pageEmpty = false;
         window.location = "/home";
     },
+
+    data: () => ({
+        user: {
+            email: "",
+            password: "",
+        }
+    }),
+
     methods: {
-        checkForm: function () {
-            this.$http({
-                method: "POST",
-                url: "/api/oauth/token",
-                data: {
-                    username: "ricardo1@dominio.com",
-                    password: "12345678",
-                    client_secret: "lDcTfL8zFExFDQWf3I7ppk4PWuFTR81d0o8YVPeT",
-                    client_id: "920a627b-13a9-4dbb-8af1-e269807f1a74",
-                    grant_type: "password",
-                },
-            })
-                .then(() => {
-                    this.$router.replace("/home");
-                })
-                .catch((error) => {
-                    console.trace(error);
-                });
+        login: function () {
+                this.$store
+                    .dispatch('login', {
+                        email: this.user.email,
+                        password: this.user.password
+                    })
+                    .then(() => {
+                        this.$router.push('/home');
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    })
         },
     },
 };

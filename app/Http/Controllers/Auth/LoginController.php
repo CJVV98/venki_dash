@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends ApiController
 {
@@ -30,4 +31,5 @@ class LoginController extends ApiController
 
         // $user->token;
     }
+
 }

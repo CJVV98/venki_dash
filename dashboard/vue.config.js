@@ -1,4 +1,5 @@
 module.exports = {
+
     // output built static files to Laravel's public dir.
     // note the "build" script in package.json needs to be modified as well.
     outputDir: "../public/dashboard",
@@ -8,4 +9,8 @@ module.exports = {
     indexPath: "../../resources/views/dashboard.blade.php",
 
     publicPath: "/dashboard",
+
+    /*devServer: {
+        proxy: 'http://localhost:8000'
+    }*/
 };

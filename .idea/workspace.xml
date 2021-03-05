@@ -3,8 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="0db00d4c-472a-4fc9-9989-925c08621b75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Post/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/assets/css/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/assets/css/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/assets/css/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/assets/css/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/activities/ListActivity.Vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/activities/ListActivity.Vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/courses/UpdateCourse.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/courses/UpdateCourse.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/header/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/header/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/replies/ViewReply.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/replies/ViewReply.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/sidebar/SidebarMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/sidebar/SidebarMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/components/users/ListUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/components/users/ListUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/config/PageRoutes.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/config/PageRoutes.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/pages/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/pages/Users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/pages/Users.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,9 +217,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dashboard" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -211,6 +239,11 @@
       <updated>1613000663697</updated>
       <workItem from="1613000665621" duration="25021000" />
       <workItem from="1613051523903" duration="11928000" />
+      <workItem from="1613603827499" duration="45900000" />
+      <workItem from="1613945606717" duration="56000" />
+      <workItem from="1614253941263" duration="17676000" />
+      <workItem from="1614486520598" duration="12646000" />
+      <workItem from="1614972140426" duration="1019000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,10 @@
+
 <script>
+
 const routes = [
     {
         path: "/",
+        name: "login",
         component: (resolve) =>
             import(/* webpackChunkName: "pages" */ "@/pages/Login.vue").then(
                 (Login) => {
@@ -11,12 +14,16 @@ const routes = [
     },
     {
         path: "/home",
+        name: "home",
         component: (resolve) =>
-            import(/* webpackChunkName: "pages" */ "@/pages/Home.vue").then(
+           import(/* webpackChunkName: "pages" */ "@/pages/Home.vue").then(
                 (Home) => {
                     resolve(Home.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/categories",
@@ -26,6 +33,9 @@ const routes = [
                     resolve(Category.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/profiles",
@@ -35,6 +45,9 @@ const routes = [
                     resolve(Profile.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/courses",
@@ -44,6 +57,9 @@ const routes = [
                     resolve(Course.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/lessons",
@@ -53,6 +69,9 @@ const routes = [
                     resolve(Course.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/resource",
@@ -62,6 +81,9 @@ const routes = [
                     resolve(Resource.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/surveys",
@@ -71,6 +93,9 @@ const routes = [
                     resolve(Survey.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/questions",
@@ -80,6 +105,9 @@ const routes = [
                     resolve(Question.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/replies",
@@ -89,6 +117,9 @@ const routes = [
                     resolve(Reply.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
     {
         path: "/users",
@@ -98,6 +129,9 @@ const routes = [
                     resolve(Users.default);
                 }
             ),
+        meta: {
+            requiresAuth: true,
+        }
     },
      {
         path: "/images",
@@ -107,7 +141,22 @@ const routes = [
                     resolve(Image.default);
                 }
             ),
+         meta: {
+             requiresAuth: true,
+         }
     },
+    {
+        path: "/activities",
+        component: (resolve) =>
+            import(/* webpackChunkName: "pages" */ "@/pages/Activity.vue").then(
+                (Activity) => {
+                    resolve(Activity.default);
+                }
+            ),
+        meta: {
+            requiresAuth: true,
+        }
+    }
 ];
 
 export default routes;

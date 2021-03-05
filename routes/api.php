@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Post\PostController;
+use App\Http\Controllers\Auth\AuthController;
+
+
 Route::get('/register/verify/{code}', 'GuestController@verify');
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,7 @@ Route::get('/register/verify/{code}', 'GuestController@verify');
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');

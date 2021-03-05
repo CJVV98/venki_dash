@@ -104,6 +104,7 @@ export default {
         this.$router.afterEach(() => {
             this.$insProgress.finish();
         });
+
     },
 };
 </script>

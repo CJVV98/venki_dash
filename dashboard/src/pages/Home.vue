@@ -19,3 +19,26 @@
         </panel>
     </div>
 </template>
+
+<script type="text/javascript">
+// import axios from "axios";
+
+export default {
+    created() {
+        // this.getUser();
+    },
+    methods: {
+      /*getUser(){
+        axios.get('/api/user').then( response => {
+            this.name = response.data.name;
+        })
+      }*/
+    },
+    data() {
+        return {
+            name: ''
+        }
+    }
+}
+
+</script>
